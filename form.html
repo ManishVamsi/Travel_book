@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #99a7d5, #feb47b);
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        label {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .container input, select {
+            border-radius: 8px;
+            width: calc(100% - 24px);
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #3e748b;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 48%;
+            margin: 5px 1%;
+        }
+
+        button:hover {
+            background-color: #40b1e1;
+            box-shadow: 1px 1px lightblue;
+            transform: translateY(-2px);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #paypal-button-container {
+            display: none; /* Initially hide the PayPal button container */
+            margin-top: 20px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+</head>
+<body>
+    <h1>Book Your Trip With Us</h1>
+    <p>Fill in your details to secure your spot for an unforgettable Trip</p>
+    <div class="container">
+        <form id="bookingForm">
+            <label for="name"><b>Full name:</b></label>
+            <input type="text" name="name" id="name" placeholder="Enter your Full Name" required>
+            
+            <label for="Phone"><b>Contact:</b></label>
+            <input type="tel" name="Phone" id="Phone" placeholder="Enter WhatsApp number" maxlength="10" required>
+            
+            <label for="email"><b>Email Address:</b></label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="destination"><b>Select Destination:</b></label>
+            <select id="destination" name="destination" required>
+                <option value="">Choose a destination</option>
+                <option value="Mt.Everest">Mount Everest</option>
+                <option value="Kanchenajunga">Kanchenajunga</option>
+                <option value="Mt.Fuji">Mount Fuji</option>
+            </select>
+            
+            <label for="date"><b>Travel Date:</b></label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="group-size"><b>Group Size:</b></label>
+            <input type="number" id="group-size" name ="group-size" placeholder="Enter number of travelers" min="1" max="10" required>
+            
+            <div class="button-container">
+                <button type="submit"><b>Register</b></button>
+                <button type="button" id="goToPayment"><b>Make Payment</b></button>
+            </div>
+        </form>
+        <div id="paypal -button-container"></div> <!-- PayPal button container -->
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Payment Successful!</h2>
+            <p>Your payment has been processed successfully. Thank you for booking with us!</p>
+        </div>
+    </div>
+
+    <script src="form.js">
+        
+    </script>
+</body>
+</html>

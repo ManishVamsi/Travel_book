@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Bound</title>
+
+  <!-- swiper cdn link -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- REMIXICONS -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!--Fonts-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+  <!-- header section starts -->
+  <header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"><span>S</span>kybound</a>
+
+    <nav class="navbar">
+      <a href="#home">home</a>
+      <a href="#book">book a trip</a>
+      <a href="#packages">packages & locations</a>
+      <a href="#services">services</a>
+      <!-- <a href="#gallery">gallery</a>
+      <a href="#review">testimonials</a> -->
+      <a href="#contact">contact</a>
+    </nav>
+
+    <div class="icons">
+      <i class="fas fa-search" id="search-btn"></i>
+      <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+      <input type="search" id="search-bar" placeholder="search here...">
+      <label for="search-bar" class="fas fa-search"></label>
+    </form>
+
+  </header>
+
+
+
+  <!-- header section ends    -->
+
+  <!-- login form container -->
+
+  <div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+
+    <form action="">
+      <h3>login</h3>
+      <input type="email" class="box" placeholder="Enter your email">
+      <input type="password" class="box" placeholder="Enter your password">
+      <input type="submit" value="login now" class="btn">
+      <input type="checkbox" id="remember">
+      <label for="remember">remember me</label>
+      <p>Forget password? <a href="#">click here</a></p>
+      <p>don't have an account? <a href="#">register now</a></p>
+    </form>
+  </div>
+
+  <!-- home section starts -->
+
+  <section class="home" id="home">
+
+    <img src="./images/home1.jpg" alt="home " class="home__img">
+
+    <div class="content">
+      <h3>experience the extraordinary</h3>
+      <p>discover new places with us, adventure awaits</p>
+      <a href="#book" class="btn">Discover more</a>
+    </div>
+
+  </section>
+
+  <!-- home section ends -->
+
+
+  <!-- book section starts -->
+  <section class="book" id="book">
+    <h1 class="heading">
+      <span>b</span>
+      <span>o</span>
+      <span>o</span>
+      <span>k</span>
+      <span class="space"></span>
+      <span>n</span>
+      <span>o</span>
+      <span>w</span>
+    </h1>
+
+    <div class="row">
+      <div class="image">
+         <img src="./images/bookimage3.jpg" alt="">
+      </div>
+      <form action="">
+        <div class="inputBox">
+          <h3>where to</h3>
+          <input type="text" placeholder="Enter Destination">
+        </div>
+        <div class="inputBox">
+          <h3>how many</h3>
+          <input type="number" placeholder="Enter Number Of People">
+        </div>
+        <div class="inputBox">
+          <h3>start date</h3>
+          <input type="date">
+        </div>
+        <div class="inputBox">
+          <h3>end date</h3>
+          <input type="date">
+        </div>
+        <input type="submit" class="btn" value="book now">
+      </form>
+    </div>
+  </section>
+
+
+  <!-- book section ends -->
+
+
+  <!-- packages section starts -->
+
+  <section class="packages" id="packages">
+    <h1 class="heading">
+      <span>p</span>
+      <span>a</span>
+      <span>c</span>
+      <span>k</span>
+      <span>a</span>
+      <span>g</span>
+      <span>e</span>
+      <span>s</span>
+    </h1>
+
+    <div class="box-container">
+      <div class="box">
+        <img src="./images/mumbai.jpeg" alt="place1">
+        <div class="content">
+          <h3> <i class="fas fa-map-marker-alt"></i> mumbai </h3>
+          <p>Mumbai, India's bustling metropolis, offers a vibrant mix of historical landmarks, stunning beaches making
+            it an unforgettable destination.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="price"> $130.00 <span>$170.00</span> </div>
+          <a href="form.html" class="btn">book now</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="./images/mount ev.jpg" alt="place2">
+        <div class="content">
+          <h3> <i class="fas fa-map-marker-alt"></i> mount everest</h3>
+          <p>Mount Everest, the world's highest peak, draws adventurers. Its awe-inspiring beauty and challenging
+            terrain make it a bucket-list destination.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="price"> $120.00 <span>$150.00</span> </div>
+          <a href="form.html" class="btn">book now</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="./images/hawaii.jpeg" alt="place3">
+        <div class="content">
+          <h3> <i class="fas fa-map-marker-alt"></i> hawaii </h3>
+          <p>Beautiful beaches and rich cultural heritage with Polynesian traditions. Exciting water activities like
+            surfing and diving in crystal-clear waters.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="price"> $100.00 <span>$140.00</span> </div>
+          <a href="form.html" class="btn">book now</a>
+        </div>
+      </div>
+
+      <div class="hidden-cards" style="display: none;">
+        <div class="box">
+          <img src="./images/sydney.webp" alt="place4">
+          <div class="content">
+            <h3> <i class="fas fa-map-marker-alt"></i> sydney </h3>
+            <p>Sydney, Australia, a vibrant city renowned for its iconic landmarks. Beauty of the Sydney Opera House and
+              the iconic Sydney Harbour Bridge.</p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price"> $190.00 <span>$220.00</span> </div>
+            <a href="form.html" class="btn">book now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="./images/mount fuji.jpg" alt="place5">
+          <div class="content">
+            <h3> <i class="fas fa-map-marker-alt"></i> mount fuji </h3>
+            <p>Majestic Mount Fuji, Japan's iconic symbol, offers breathtaking views and a serene atmosphere, attracting
+              millions of visitors annually.</p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price"> $140.00 <span>$200.00</span> </div>
+            <a href="form.html" class="btn">book now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="./images/paris.jpg" alt="place6">
+          <div class="content">
+            <h3> <i class="fas fa-map-marker-alt"></i> paris </h3>
+            <p>Paris, the City of Lights, captivates with its iconic landmarks like the Eiffel Tower and romantic Seine
+              River cruises offer unforgettable experiences.</p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price"> $190.00 <span>$220.00</span> </div>
+            <a href="form.html" class="btn">book now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="./images/mountk2.jpg" alt="place7">
+          <div class="content">
+            <h3> <i class="fas fa-map-marker-alt"></i> Mount K2 </h3>
+            <p>K2, the "Savage Mountain," is the world's second-highest peak, renowned for high fatality rate.
+              It offers a thrilling challenge for mountaineers.</p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price"> $90.00 <span>$120.00</span> </div>
+            <a href="form.html" class="btn">book now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="./images/tokyo.jpeg" alt="place8">
+          <div class="content">
+            <h3> <i class="fas fa-map-marker-alt"></i> tokyo </h3>
+            <p>Tokyo, a vibrant metropolis, blends ancient traditions with cutting-edge technology.
+              Experience the serenity of ancient temples like Senso-ji.</p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price"> $170.00 <span>$240.00</span> </div>
+            <a href="form.html" class="btn">book now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="./images/egypt.jpeg" alt="place9">
+          <div class="content">
+            <h3> <i class="fas fa-map-marker-alt"></i> egypt </h3>
+            <p>Egypt offers a captivating blend of ancient wonders and modern marvels.
+              From the majestic Pyramids of Giza to the vibrant Red Sea coast.</p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price"> $135.00 <span>$155.00</span> </div>
+            <a href="form.html" class="btn">book now</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <button id="see-more" class="btn">See More</button>
+  </section>
+
+
+
+  <section class="map" id="map">
+    <h1 class="heading">
+      <span>l</span>
+      <span>o</span>
+      <span>c</span>
+      <span>a</span>
+      <span>t</span>
+      <span>i</span>
+      <span>o</span>
+      <span>n</span>
+      <span>s</span>
+    </h1>
+
+    <div id="map-container" style="height: 400px;"></div>
+  </section>
+
+
+  <!-- packages section ends -->
+
+
+  <!-- services section starts -->
+  <section class="services" id="services">
+
+    <h1 class="heading">
+      <span>s</span>
+      <span>e</span>
+      <span>r</span>
+      <span>v</span>
+      <span>i</span>
+      <span>c</span>
+      <span>e</span>
+      <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+      <div class="box">
+        <i class="fas fa-hotel"></i>
+        <h3>affordable hotels</h3>
+        <p>Affordable hotels offer budget-conscious travelers comfortable and clean accommodations without breaking the bank.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-utensils"></i>
+        <h3>food and drinks</h3>
+        <p>Experience the local culture through its vibrant food and drink. Sample authentic dishes, sip on handcrafted cocktails, at charming cafes and lively restaurants.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-bullhorn"></i>
+        <h3>safety guide</h3>
+        <p>Travel safely and confidently with our comprehensive safety guides. Find essential information on local laws, emergency contacts, and travel health advice.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-globe-asia"></i>
+        <h3>around the world</h3>
+        <p>Experience the world's breathtaking beauty from soaring mountains to pristine beaches.Discover hidden gem around-the-world adventure.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-plane"></i>
+        <h3>fastest travel</h3>
+        <p>Experience the thrill of rapid transit! Explore our selection of high-speed trains, jets, and other swift modes of transportation to maximize your travel time and see the world in a flash.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-hiking"></i>
+        <h3>adventures</h3>
+        <p>Escape the ordinary. Dive headfirst into exciting experiences that will push your limits and ignite your spirit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- services section ends -->
+
+  <!-- gallery section starts -->
+
+  <section class="gallery" id="gallery">
+
+    <h1 class="heading">
+      <span>g</span>
+      <span>a</span>
+      <span>l</span>
+      <span>l</span>
+      <span>e</span>
+      <span>r</span>
+      <span>y</span>
+    </h1>
+
+    <di class="box-container">
+
+      <div class="box">
+        <img src="images/g-1.jpg" alt="">
+        <div class="content">
+          <h3>amazing places</h3>
+          <p>Indulge in tranquility amidst lush landscapes and serene retreats.</p>
+          <a href="#" class="btn">see more</a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/g-2.jpg" alt="">
+        <div class="content">
+          <h3>amazing places</h3>
+          <p>Escape to pristine shores where turquoise waters meet golden sands.</p>
+          <a href="#" class="btn">see more</a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/g-3.jpg" alt="">
+        <div class="content">
+          <h3>amazing places</h3>
+          <p>Unearth ancient civilizations in the cradle of human history.</p>
+          <a href="#" class="btn">see more</a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/g-4.jpg" alt="">
+        <div class="content">
+          <h3>amazing places</h3>
+          <p>Capture breathtaking landscapes that will take your breath away.</p>
+          <a href="#" class="btn">see more</a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/g-5.jpg" alt="">
+        <div class="content">
+          <h3>amazing places</h3>
+          <p>Wander through world-renowned museums and vibrant art districts.</p>
+          <a href="#" class="btn">see more</a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/g-6.jpg" alt="">
+        <div class="content">
+          <h3>amazing places</h3>
+          <p>Embrace the freedom of the open road and discover hidden gems.</p>
+          <a href="#" class="btn">see more</a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/g-7.jpg" alt="">
+        <div class="content">
+          <h3>amazing places</h3>
+          <p>Unleash your inner explorer in remote and awe-inspiring landscapes.</p>
+          <a href="#" class="btn">see more</a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="images/g-8.jpg" alt="">
+        <div class="content">
+          <h3>amazing places</h3>
+          <p>Create unforgettable memories with exciting adventures for all ages.</p>
+          <a href="#" class="btn">see more</a>
+        </div>
+      </div>
+
+      </div>
+
+  </section>
+
+
+  <!-- gallery section ends -->
+
+
+  <!-- review section starts  -->
+
+  <section class="review" id="review">
+
+    <h1 class="heading">
+      <span>T</span>
+      <span>e</span>
+      <span>s</span>
+      <span>t</span>
+      <span>i</span>
+      <span>m</span>
+      <span>o</span>
+      <span>n</span>
+      <span>i</span>
+      <span>a</span>
+      <span>l</span>
+      <span>s</span>
+    </h1>
+
+    <div class="swiper-container review-slider">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="box">
+            <img src="./images/user1.jpg" alt="user1">
+            <h3>Arohi Shah</h3>
+            <p>I was hesitant to book a trip online, but I'm so glad I did.
+              <b>Sky Bound</b> made the entire process easy and stress-free. The itinerary was perfectly planned,
+              and the local guides were friendly. I had the time of my life!
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="box">
+            <img src="./images/user2.jpg" alt="user2">
+            <h3>Ethan Hunt</h3>
+            <p>From the moment I booked my trip to the day I returned,<b>Sky Bound</b> exceeded all expectations.
+              The personalized itinerary, expert local guides, made for an unforgettable experience.
+              I'll definitely be a returning customer!</p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="box">
+            <img src="./images/user3.png" alt="user3">
+            <h3>Shraddha </h3>
+            <p>My safari adventure with <b>Sky Bound</b> was beyond amazing.
+              Witnessing the wildlife in their natural habitat was truly breathtaking.
+              The knowledgeable guides & comfortable accommodations made every moment special</p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="box">
+            <img src="./images/user4.webp" alt="user4">
+            <h3>Robert Roy</h3>
+            <p><b>Skybound</b> Travel exceeded all expectations for our recent trip.
+              The personalized itinerary & From luxurious accommodations to thrilling adventures,
+              allowing us to fully immerse ourselves in the beauty and culture of each destination.</p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- review section ends -->
+
+
+  <!-- contact section starts -->
+
+  <section class="contact" id="contact">
+
+    <h1 class="heading">
+      <span>c</span>
+      <span>o</span>
+      <span>n</span>
+      <span>t</span>
+      <span>a</span>
+      <span>c</span>
+      <span>t</span>
+    </h1>
+
+    <div class="row">
+
+      <div class="image">
+        <img src="images/contact-img.svg" alt="img">
+      </div>
+
+      <form action="">
+        <div class="inputBox">
+          <input type="text" placeholder="Enter your name">
+          <input type="email" placeholder="Enter your email">
+        </div>
+        <div class="inputBox">
+          <input type="tel" placeholder="Enter Mobile Number">
+          <input type="text" placeholder="Query Type">
+        </div>
+        <textarea placeholder="Enter message" name="" id="" cols="30" rows="10"></textarea>
+        <input type="submit" class="btn" value="send message">
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- contact section ends -->
+
+  <!-- footer section starts -->
+
+  <section class="footer">
+
+    <div class="box-container">
+
+      <div class="box">
+        <h3>branch locations</h3>
+        <p>India</p>
+        <p>America</p>
+        <p>England</p>
+        <p>Australia</p>
+      </div>
+
+      <div class="box">
+        <h3>about us</h3>
+        <p><b>Skybound:</b> Where your wanderlust takes flight. Explore the world, one adventure at a time.</p>
+      </div>
+
+      <div class="box">
+        <h3>follow us</h3>
+
+        <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i
+            class="fab fa-facebook-f"></i>&emsp13;facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i
+            class="fab fa-instagram"></i>&emsp13;instagram</a>
+        <a href="https://x.com/?lang=en" target="_blank" class="social-icon"><i
+            class="fab fa-twitter"></i>&emsp13;twitter</a>
+      </div>
+    </div>
+    <h1 class="credit">  <span> &copy; </span> 2025 | all rights reserved | </h1>
+  </section>
+
+
+  <button id="back-to-top"  style="display: none;" class="btn" >↑</button>
+
+
+  <!-- footer section ends -->
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- custom js file link -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
